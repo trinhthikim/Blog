@@ -27,9 +27,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-
-        return view('home')->with('posts', Post::paginate(6));
+        if($request->has('search')) {
+            $posts = Post::search($request->search)->get();
+        }
+        else {
+            $posts = Post::all();
+        }
+        return view('home')->with('posts', $posts);
     }
 }
