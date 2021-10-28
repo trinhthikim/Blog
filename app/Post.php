@@ -2,11 +2,13 @@
 
 namespace App;
 
+use Elasticquent\ElasticquentTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
 class Post extends Model
 {
+    use ElasticquentTrait;
     use Notifiable;
 
     /**
@@ -22,4 +24,14 @@ class Post extends Model
 //    {
 //        return $this->belongsTo(User::class);
 //    }
+    protected $mappingProperties = array(
+        'title' => [
+            'type' => 'text',
+            "analyzer" => "standard",
+        ],
+        'body' => [
+            'content' => 'text',
+            "analyzer" => "standard",
+        ],
+    );
 }

@@ -20,3 +20,4 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('post', 'PostController');
 });
+Route::get('/post/{post}', 'PostController@show')->name('post.show');

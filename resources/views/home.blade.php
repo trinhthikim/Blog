@@ -38,7 +38,7 @@
                 </div>
                 <div class="d-flex justify-content-center m-3">
                     <div>
-                        {{ $posts->links('vendor.pagination.bootstrap-4') }}
+{{--                        {{ $posts->links('vendor.pagination.bootstrap-4') }}--}}
                     </div>
                 </div>
             </div>
