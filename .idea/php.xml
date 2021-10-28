@@ -98,11 +98,16 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/elasticquent/elasticquent" />
+=======
+      <path value="$PROJECT_DIR$/vendor/laravel/scout" />
+>>>>>>> 57e9c292aa3485a94ae7f70259e62b68dadaaac1
       <path value="$PROJECT_DIR$/vendor/ezimuel/ringphp" />
       <path value="$PROJECT_DIR$/vendor/ezimuel/guzzlestreams" />
       <path value="$PROJECT_DIR$/vendor/elasticsearch/elasticsearch" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/babenkoivan/scout-elasticsearch-driver" />
       <path value="$PROJECT_DIR$/vendor/illuminate/support" />
       <path value="$PROJECT_DIR$/vendor/illuminate/session" />
@@ -127,6 +132,9 @@
       <path value="$PROJECT_DIR$/vendor/brick/math" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+=======
+      <path value="$PROJECT_DIR$/vendor/tamayo/laravel-scout-elastic" />
+>>>>>>> 57e9c292aa3485a94ae7f70259e62b68dadaaac1
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

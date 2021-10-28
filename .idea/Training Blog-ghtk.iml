@@ -103,11 +103,16 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/object-enumerator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/predis/predis" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/vendor/elasticquent/elasticquent" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/scout" />
+>>>>>>> 57e9c292aa3485a94ae7f70259e62b68dadaaac1
       <excludeFolder url="file://$MODULE_DIR$/vendor/ezimuel/ringphp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ezimuel/guzzlestreams" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/elasticsearch/elasticsearch" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/vendor/babenkoivan/scout-elasticsearch-driver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/support" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/session" />
@@ -132,6 +137,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tamayo/laravel-scout-elastic" />
+>>>>>>> 57e9c292aa3485a94ae7f70259e62b68dadaaac1
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

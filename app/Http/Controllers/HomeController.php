@@ -29,6 +29,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+<<<<<<< HEAD
         if($request->has('search')){
             Post::addAllToIndex();
             $response = Post::searchByQuery([
@@ -42,5 +43,14 @@ class HomeController extends Controller
             return view('home')->with('posts', $response);
         }
         return view('home')->with('posts', Post::paginate(6));
+=======
+        if($request->has('search')) {
+            $posts = Post::search($request->search)->get();
+        }
+        else {
+            $posts = Post::all();
+        }
+        return view('home')->with('posts', $posts);
+>>>>>>> 57e9c292aa3485a94ae7f70259e62b68dadaaac1
     }
 }

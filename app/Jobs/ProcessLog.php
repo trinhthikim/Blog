@@ -37,7 +37,6 @@ class ProcessLog implements ShouldQueue
     public function handle()
     {
         echo 'Start send log';
-
         $log = new PostLog([
             'user_id' => $this->user_id,
             'post_id' => $this->post_id,

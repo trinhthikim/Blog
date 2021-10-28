@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\EditPost;
 use App\Jobs\ProcessLog;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
@@ -58,7 +59,12 @@ class PostController extends Controller
             'user_name' => Auth::user()->name,
         ]);
 
-        ProcessLog::dispatch(Auth::user()->id, $post->id, 'create');
+        $postLog = new PostLog([
+            'user_id' => Auth::user()->id,
+            'post_id' => $post->id,
+            'type' => 'create'
+        ]);
+        event(new EditPost($postLog));
 
         return redirect(route('post.index'))->with('success', 'Post is successfully saved');
     }
@@ -108,7 +114,12 @@ class PostController extends Controller
             'content' => $request['content'],
         ]);
 
-        ProcessLog::dispatch(Auth::user()->id, $id, 'edit');
+        $postLog = new PostLog([
+            'user_id' => Auth::user()->id,
+            'post_id' => $id,
+            'type' => 'edit'
+        ]);
+        event(new EditPost($postLog));
 
         return redirect(route('post.index'))->with('success', 'Post is successfully saved');
     }
@@ -124,7 +135,12 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->delete();
 
-        ProcessLog::dispatch(Auth::user()->id, $id, 'delete');
+        $postLog = new PostLog([
+            'user_id' => Auth::user()->id,
+            'post_id' => $id,
+            'type' => 'delete'
+        ]);
+        event(new EditPost($postLog));
 
         return redirect(route('post.index'))->with('success', 'Show is successfully deleted');
     }
